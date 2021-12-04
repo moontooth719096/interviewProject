@@ -50,7 +50,3 @@
   box-sizing: border-box;
 }
 
-.sidenav:hover .list-item{
-  animation: fade-in 0.5s linear forwards;
-}
-
