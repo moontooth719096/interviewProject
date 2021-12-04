@@ -1,0 +1,68 @@
+<mat-toolbar color="warn" class="header-toolbar" (window:resize)="onResize($event)">
+  <button type="button" aria-label="Toggle sidenav" *ngIf="isLeftmenuButton" mat-icon-button
+    (click)="isLeftmenu=!isLeftmenu">
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <span>AngularTri</span>
+  <span class="toolbar-seprator"></span>
+  <span>{{programName}}</span>
+  <button mat-icon-button>
+    <mat-icon>face</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-drawer-container autosize>
+  <mat-drawer #drawer position="start" [mode]="menumode" class="sidenav" [opened]="isLeftmenu"
+    (mouseover)="isLeftmenuItemTitle=true" (mouseout)="isLeftmenuItemTitle=false">
+    <!-- <button type="button" aria-label="Toggle sidenav" mat-icon-button (mouseover)="isLeftmenu=true"
+      (mouseout)="isLeftmenu=false">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button> -->
+    <mat-nav-list>
+      <mat-list-item>
+        <mat-icon mat-list-icon>person</mat-icon>
+        <h4 mat-line [@openClose]="isLeftmenuItemTitle? true : false">Management A</h4>
+      </mat-list-item>
+      <!-- <mat-list-item>
+        <mat-icon mat-list-icon>assignment</mat-icon>
+        <h4 mat-line *ngIf="isLeftmenu">Management B</h4>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon mat-list-icon>domain</mat-icon>
+        <h4 mat-line *ngIf="isLeftmenu">Management C</h4>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon mat-list-icon>folder_shared</mat-icon>
+        <h4 mat-line *ngIf="isLeftmenu">Management X</h4>
+      </mat-list-item> -->
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content class="mat-sidenav-content ">
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+<mat-sidenav-container fixedInViewport="true">
+  <mat-sidenav #drawerRight position="end" mode="side" class="sidenavRight">
+    <mat-toolbar color="primary">
+      <span>基本資料</span>
+      <span>
+        <mat-icon>verified_user</mat-icon>
+      </span>
+    </mat-toolbar>
+    <mat-list>
+      <mat-list-item class="l-sub-section">
+        <mat-icon>code</mat-icon>
+        Peterhu2Tri
+      </mat-list-item>
+      <mat-list-item class="l-sub-section">
+        <mat-icon>account_circle</mat-icon>
+        三十天鐵人賽
+      </mat-list-item>
+      ...
+    </mat-list>
+  </mat-sidenav>
+</mat-sidenav-container>

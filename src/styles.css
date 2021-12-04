@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://meyerweb.com/eric/tools/css/reset/reset200802.css');
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.sitebody{
+  width:100vw;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.topbar{
+  background-color: #0c2c26;
+  line-height: 60px;
+}
+
+.mainmenu{
+  height: 100vh;
+  width: 15%;
+  background-color: #5f4040;
+  float: left;
+}
+
+.rightmenu{
+  height: 100vh;
+  width: 15vw;
+  background-color: #dd1562;
+  float: right;
+}
+
+
+.content{
+  height: 100vh;
+  width: 85%;
+  background-color: #1e2b50;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
