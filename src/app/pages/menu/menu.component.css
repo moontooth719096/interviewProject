@@ -1,6 +1,7 @@
 
 .sidenav-container {
   height: 100%;
+  float: left;
 }
 
 .sidenav {
@@ -16,11 +17,12 @@
 }
 /*標頭toolbar*/
 .header-toolbar {
-  padding: 0 16px 0 0;
   position: fixed;
-  left: 0;
+  margin: 0 16px 0 0;
+  /* left: 0;
   right: 0;
-  top: 0;
+  top: 0; */
+  line-height: auto;
   z-index: 10;
 }
 /*選單toolbar*/
@@ -30,9 +32,7 @@
   z-index: 2;
 } */
 
-.mat-drawer-content.mat-sidenav-content {
-  margin-top: 100px /*因為固定了最上面的toolbar，所以讓contonet內容往下移*/
-}
+
 
 /*分隔toolbar內的空間*/
 .toolbar-seprator {

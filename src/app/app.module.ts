@@ -5,34 +5,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
 
 import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { VideocateforiesComponent } from './videocatefories/videocatefories.component';
+import { PagesModule } from './pages/pages.module';
+import { MenunewComponent } from './pages/menunew/menunew.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
-    VideocateforiesComponent
+    MenunewComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     LayoutModule,
-    AngularMaterialModule
-    // MatToolbarModule,
-    // MatButtonModule,
-    // MatSidenavModule,
-    // MatIconModule,
-    // MatListModule,
-    // BrowserAnimationsModule,
-    // MatCardModule,
-    // MatGridListModule
+    AngularMaterialModule,
+    PagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }

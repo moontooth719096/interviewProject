@@ -1,0 +1,16 @@
+
+.example-container {
+  height: 100vh;
+}
+.sidenav {
+
+  position: absolute;
+}
+/*分隔toolbar內的空間*/
+.toolbar-seprator {
+  flex: 1 1 auto;
+}
+
+/* .header-toolbar{
+  line-height: 10vh;
+} */
